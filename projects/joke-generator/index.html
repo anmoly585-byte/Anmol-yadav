@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-generator">
+            <h1>😂 Joke Generator 😂</h1>
+            <p class="subtitle">Get a random joke to brighten your day!</p>
+            
+            <div class="joke-display">
+                <div id="jokeText" class="joke-text">
+                    <p>Click the button to get a joke!</p>
+                </div>
+                <div id="jokeType" class="joke-type"></div>
+            </div>
+            
+            <div class="controls">
+                <button id="getJokeBtn" class="btn btn-primary" onclick="getJoke()">🎭 Get Joke</button>
+                <button id="shareBtn" class="btn btn-secondary" onclick="shareJoke()">📤 Share</button>
+                <button id="copyBtn" class="btn btn-secondary" onclick="copyJoke()">📋 Copy</button>
+            </div>
+            
+            <div class="joke-filters">
+                <h3>Filter by Category:</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" onclick="setCategory('any')">All Jokes</button>
+                    <button class="category-btn" onclick="setCategory('general')">General</button>
+                    <button class="category-btn" onclick="setCategory('programming')">Programming</button>
+                    <button class="category-btn" onclick="setCategory('knock-knock')">Knock-Knock</button>
+                </div>
+            </div>
+            
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Loading joke...</p>
+            </div>
+            
+            <div class="stats">
+                <p>Jokes loaded: <span id="jokeCount">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
