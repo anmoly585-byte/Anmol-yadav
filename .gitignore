@@ -1,0 +1,31 @@
+# Compiled Java files
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite
+*.sql
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build directories
+target/
+bin/
+build/
+
+# Node modules (if using Node for tooling)
+node_modules/
