@@ -1,0 +1,255 @@
+/* =============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================= */
+
+/* Mobile Styles (Default) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        width: 100%;
+        flex-direction: row;
+        font-size: 0.85rem;
+    }
+
+    .nav-menu a {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .login-box,
+    .register-box {
+        margin: 10px;
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .btn {
+        padding: 0.6rem 1rem;
+    }
+
+    .dashboard-container {
+        padding: 1rem 10px;
+    }
+
+    .accounts-grid,
+    .actions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .account-card {
+        padding: 1rem;
+    }
+
+    .account-balance h2 {
+        font-size: 1.5rem;
+    }
+
+    .action-btn {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .transfer-container,
+    .history-container,
+    .profile-container {
+        padding: 1rem 10px;
+    }
+
+    .transfer-box,
+    .profile-box {
+        padding: 1.5rem;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .filter-input {
+        width: 100%;
+        padding: 0.6rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+
+    .badge {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .accounts-grid,
+    .actions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .login-box,
+    .register-box {
+        max-width: 450px;
+        padding: 2rem;
+    }
+
+    .transfer-box,
+    .profile-box {
+        padding: 1.5rem;
+    }
+
+    .filter-section {
+        flex-wrap: wrap;
+    }
+
+    .filter-input {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    table {
+        font-size: 0.95rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .accounts-grid,
+    .actions-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .nav-menu {
+        flex-direction: row;
+    }
+
+    .filter-section {
+        flex-direction: row;
+    }
+
+    .filter-input {
+        flex: 1;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+    .dashboard-container,
+    .transfer-container,
+    .history-container,
+    .profile-container {
+        max-width: 1200px;
+    }
+
+    .accounts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .actions-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* =============================================
+   ACCESSIBILITY - DARK MODE SUPPORT
+   ============================================= */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #e0e0e0;
+    }
+
+    .login-box,
+    .register-box,
+    .transfer-box,
+    .profile-box,
+    .account-card,
+    .history-table {
+        background: #2d2d44;
+        color: #e0e0e0;
+    }
+
+    .form-group label {
+        color: #e0e0e0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        background: #3d3d54;
+        border-color: #4d4d64;
+        color: #e0e0e0;
+    }
+
+    table thead {
+        background: #3d3d54;
+    }
+
+    table th {
+        color: #e0e0e0;
+    }
+
+    table tbody tr:hover {
+        background: #3d3d54;
+    }
+
+    .filter-section {
+        background: #2d2d44;
+    }
+}
+
+/* =============================================
+   PRINT STYLES
+   ============================================= */
+
+@media print {
+    .navbar,
+    .btn,
+    .filter-section {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .history-table {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #ccc;
+        padding: 0.75rem;
+    }
+}
