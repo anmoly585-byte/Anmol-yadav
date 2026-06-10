@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Online Banking System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>🏦 Online Banking</h2>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="transfer.html">Transfer</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="index.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h1>Welcome, <span id="userName">User</span>!</h1>
+
+        <div class="accounts-section">
+            <h2>Your Accounts</h2>
+            <div class="accounts-grid">
+                <div class="account-card">
+                    <h3>Saving Account</h3>
+                    <p class="account-number">Account No: 1001234567</p>
+                    <div class="account-balance">
+                        <p>Balance</p>
+                        <h2>₹<span>50,000</span></h2>
+                    </div>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+
+                <div class="account-card">
+                    <h3>Current Account</h3>
+                    <p class="account-number">Account No: 1001234568</p>
+                    <div class="account-balance">
+                        <p>Balance</p>
+                        <h2>₹<span>1,25,000</span></h2>
+                    </div>
+                    <button class="btn btn-secondary">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="actions-grid">
+                <button class="action-btn" onclick="window.location.href='transfer.html'">
+                    💸 Transfer Money
+                </button>
+                <button class="action-btn" onclick="window.location.href='history.html'">
+                    📊 View History
+                </button>
+                <button class="action-btn" onclick="alert('Feature coming soon!')">
+                    🧾 Apply for Loan
+                </button>
+                <button class="action-btn" onclick="window.location.href='profile.html'">
+                    👤 Edit Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

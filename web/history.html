@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Online Banking System</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>🏦 Online Banking</h2>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="transfer.html">Transfer</a></li>
+                <li><a href="history.html" class="active">History</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="index.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="history-container">
+        <h1>📊 Transaction History</h1>
+
+        <div class="filter-section">
+            <input type="date" id="filterDate" class="filter-input" placeholder="Filter by date">
+            <select id="filterType" class="filter-input">
+                <option value="">All Types</option>
+                <option value="Deposit">Deposit</option>
+                <option value="Withdrawal">Withdrawal</option>
+                <option value="Transfer">Transfer</option>
+            </select>
+            <button class="btn btn-secondary">Filter</button>
+        </div>
+
+        <div class="history-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Transaction Type</th>
+                        <th>From Account</th>
+                        <th>To Account</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionBody">
+                    <tr>
+                        <td>2026-06-09 14:30:00</td>
+                        <td><span class="badge transfer">Transfer</span></td>
+                        <td>1001234567</td>
+                        <td>1001234568</td>
+                        <td>₹5,000</td>
+                        <td><span class="status-success">Success</span></td>
+                    </tr>
+                    <tr>
+                        <td>2026-06-08 10:15:00</td>
+                        <td><span class="badge deposit">Deposit</span></td>
+                        <td>1001234567</td>
+                        <td>1001234567</td>
+                        <td>₹10,000</td>
+                        <td><span class="status-success">Success</span></td>
+                    </tr>
+                    <tr>
+                        <td>2026-06-07 16:45:00</td>
+                        <td><span class="badge withdrawal">Withdrawal</span></td>
+                        <td>1001234568</td>
+                        <td>1001234568</td>
+                        <td>₹2,500</td>
+                        <td><span class="status-success">Success</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/history.js"></script>
+</body>
+</html>
